@@ -4,4 +4,4 @@
   
 [Лабораторная 1](./lab1/lab1_report.md)  
 [Лабораторная 2](./lab2/lab2_report.md)   
-[Лабораторная 3](./lab2/README.md)  
+[Лабораторная 3](./lab3/README.md)  
