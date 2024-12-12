@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: front-ingress
+spec:
+  tls:
+  - hosts:
+    - front.bortko.daria
+    secretName: mkcert
+  rules:
+  - host: front.bortko.daria
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: front-service
+            port:
+              number: 3000
