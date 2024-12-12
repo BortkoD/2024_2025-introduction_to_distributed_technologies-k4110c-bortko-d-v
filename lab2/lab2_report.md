@@ -6,7 +6,7 @@ Group: K4110c
 Author: Bortko Daria Victorovna  
 Lab: Lab2  
 Date of create: 12.12.2024  
-Date of finished: -  
+Date of finished: 12.12.2024  
 
 ## Описание   
 В данной лабораторной работе вы познакомитесь с развертыванием полноценного веб сервиса с несколькими репликами. 
