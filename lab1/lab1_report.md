@@ -6,7 +6,7 @@ Group: K4110c
 Author: Bortko Daria Victorovna  
 Lab: Lab1  
 Date of create: 01.12.2024  
-Date of finished: -  
+Date of finished: 12.12.2024  
 
 ## Описание   
 Это первая лабораторная работа в которой вы сможете протестировать Docker, установить Minikube и развернуть свой первый "под".  
