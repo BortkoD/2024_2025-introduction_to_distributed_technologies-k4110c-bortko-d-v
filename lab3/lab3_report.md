@@ -24,8 +24,8 @@ kind: ConfigMap
 metadata:
   name: front-configmap
 data:
-  REACT_APP_USERNAME: "Bortko Daria"
-  REACT_APP_COMPANY_NAME: "ITMO"
+  REACT_APP_USERNAME: "bortko-daria"
+  REACT_APP_COMPANY_NAME: "itmo"
 ```
 
 ![Создание configMap](./img/create_configmap.jpg)  
