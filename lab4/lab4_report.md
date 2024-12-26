@@ -21,20 +21,20 @@ Calico - open-source проект. Плагин, позволяющий расш
 
 Поднимаем minikube в режиме Multi-Node Clusters с двумя нодами и плагином CNI=calico:  
 
-![Minikube_start]('./img/start.jpg') 
+![Minikube_start](./img/start.jpg) 
 
 Проверяем, что поднялись обе ноды, а также поды с calico:  
 
-![Two_nodes]('./img/nodes.jpg')  
+![Two_nodes](./img/nodes.jpg)  
 
 Проверим работу Calico, используя функцию IPAM plugin - первой ноде назначим географическую метку SPb, второй - Karelia.  
 IPAM - IP-address management, плагин службы управления IP-адресами.
 
-![Calico_check]('./img/calico_check.jpg')  
+![Calico_check](./img/calico_check.jpg)  
 
 Проверим уже имеющиеся в системе пулы IP-адресов, удалим лишнее:
 
-![IP_pools]('./img/ip_pools.jpg') 
+![IP_pools](./img/ip_pools.jpg) 
 
 Создаем два пула IP-адресов, которые будут применяться в зависимости от метки ноды:
 
@@ -62,22 +62,22 @@ spec:
 
 Воспользуемся утилитой calicoctl для создания собственных пулов (перед этим утилиту нужно поставить, если ранее этого сделано не было). Поскольку работа выполняется под ОС Windows, нужно дополнительно передать в calico kube-конфиг, т.к. по умолчанию он будет искать их по путям Linux и, разумеется, не найдет. Также требуется использовать флаг  --allow-version-mismatch, чтобы избежать несоответствия версий.
 
-![create_pools]('./img/create_pools.jpg') 
+![create_pools](./img/create_pools.jpg) 
 
-Для создания deployment и сервиса воспользуемся файлами из прошлой лабораторной с небольшими модификациями: [configmap.yaml]('./yaml/configmap.yaml'), [deployment.yaml]('./yaml/deployment.yaml'), [service.yaml]('./yaml/service.yaml')
+Для создания deployment и сервиса воспользуемся файлами из прошлой лабораторной с небольшими модификациями: [configmap.yaml](./yaml/configmap.yaml), [deployment.yaml](./yaml/deployment.yaml), [service.yaml](./yaml/service.yaml)
 
 Проверим, какие IP-адреса были назначены подам:
 
-![IP_check]('./img/ip_check.jpg')  
+![IP_check](./img/ip_check.jpg)  
 
 Проверим, что будет отображаться на странице в браузере. Переменные Container name и Container IP могут меняться в зависимости от состояния пода, из которого мы запускаемся. Под работоспособен => переменные постоянные, под умер (или оказался слишком загружен и балансировщик отправил нас на другой) => данные на странице изменились.
 
-![localhost_check]('./img/localhost.jpg')  
+![localhost_check](./img/localhost.jpg)  
 
 Проверим ping между подами:
 
-![ping_check]('./img/ping.jpg')  
+![ping_check](./img/ping.jpg)  
 
 Схема организации контейнеров и сервисов:  
 
-![scheme]('./img/scheme.jpg') 
+![scheme](./img/scheme.jpg) 
